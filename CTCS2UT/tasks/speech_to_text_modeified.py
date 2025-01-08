@@ -7,7 +7,7 @@ from argparse import Namespace
 from fairseq import utils, metrics
 from fairseq.tasks import register_task
 from fairseq.tasks.speech_to_text import SpeechToTextTask
-from translatotron.datasets.speech_to_text_dataset_modified import SpeechToTextDatasetModifiedCreator
+from CTCS2UT.datasets.speech_to_text_dataset_modified import SpeechToTextDatasetModifiedCreator
 
 
 logger = logging.getLogger(__name__)
