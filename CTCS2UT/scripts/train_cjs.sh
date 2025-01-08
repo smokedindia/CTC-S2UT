@@ -1,5 +1,5 @@
-exp=cvss-c.es-en.conformer-at-3
-PYTHONPATH=fairseq fairseq-train data/es-en/es \
+exp=cvss-c.es-en.conformer-at-4
+PYTHONPATH=fairseq fairseq-train /mnt/lynx1/datasets/CVSS-C/es-en/es \
   --user-dir CTCS2UT \
   --config-yaml /mnt/lynx1/datasets/CVSS-C/es-en/es/config.yaml \
   --task speech_to_text_modified \
@@ -11,7 +11,6 @@ PYTHONPATH=fairseq fairseq-train data/es-en/es \
   --train-subset train --valid-subset dev \
   --save-dir checkpoints/$exp \
   --ddp-backend=legacy_ddp --patience 10 \
-  --bf16 \
   --no-progress-bar --log-format tqdm --log-interval 100 \
   --lr 1e-3 --lr-scheduler inverse_sqrt --warmup-init-lr 1e-7 --warmup-updates 10000 \
   --optimizer adam --adam-betas "(0.9,0.98)" --clip-norm 1.0 \
